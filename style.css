@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    background-color: #EEE
+}
+.cubic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.faces {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(30deg);
+}
+
+.faces > div {
+    height: 200px;
+    width: 200px;
+    background-color: #80808096;
+    border: 1px solid red;
+    font-size: 30px;
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.faces > div:nth-of-type(2) {
+    transform-origin: right;
+    transform: translateX(-100%) rotateY(-90deg);
+}
+.faces >div:nth-of-type(3) {
+    transform-origin: left;
+    transform: translateX(100%) rotateY(90deg)
+}
+
+.faces >div:nth-of-type(4) {
+    transform-origin: top;
+    transform: translateY(100%) rotateX(-90deg)
+}
+
+.faces >div:nth-of-type(5) {
+    transform-origin: bottom;
+    transform: translateY(-100%) rotateX(90deg)
+}
+
+.faces >div:nth-of-type(6) {
+    transform: translateZ(-200px) rotateY(180deg);
+}
